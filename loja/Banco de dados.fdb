@@ -1,0 +1,15 @@
+-- Criar base de dados.
+CREATE DATABASE loja;
+-- criar tabela produtos
+CREATE TABLE produtos (
+	nome varchar (255),
+  	id integer AUTO_INCREMENT PRIMARY KEY,
+    descricao text (255),
+    preco decimal,
+    categoria_id integer
+    );
+ -- Criar tabela categorias
+ CREATE TABLE categorias (
+     nome varchar (255),
+     id integer
+  )
