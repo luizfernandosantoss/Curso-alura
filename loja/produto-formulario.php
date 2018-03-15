@@ -1,37 +1,39 @@
-<?php include("cabecalho.php");?>   
-   <h1> Formulário de produto</h1>    
+<?php include("cabecalho.php");
+include ("conecta.php");
+include ("banco-produto.php");
+include ("banco-categoria.php");
+$categorias = listaCategoria($conexao);
+
+?>
+
+<h1>Formulário de cadastro</h1>
 <form action="adiciona-produto.php" method="post">
     <table class="table">
         <tr>
-            <td>Nome:</td>
-            <td><input class="form-control" type="text" name="nome"><br/><br/></td>
+            <td>Nome</td>
+            <td><input class="form-control" type="text" name="nome" /></td>
         </tr>
         <tr>
-            <td>
-                Preço:
-            </td>
-            <td>
-                <input class="form-control" type="number" name="preco" step="0.01"><br\><br/><br/></br\>
-            </td>
+            <td>Preço</td>
+            <td><input class="form-control" type="number" name="preco" /></td>
         </tr>
         <tr>
-            <td>Descrição:</td>
-            <td><textarea name="descricao" class="form-control" ></textarea><br/><br/></td>
+            <td>Descrição</td>
+            <td><textarea class="form-control" name="descricao"></textarea></td>
         </tr>
         <tr>
             <td>Categoria</td>
             <td>
-                <input type="radio" name="categoria">Esporte</br>
-                <input type="radio" name="categoria">Escolar</br>
-                <input type="radio" name="categoria">Mobilidade</br>
-
+                <?php foreach ($categorias as $categoria) :?>
+                <input type="radio" name="categoria_id" value="<?=$categoria['id']?>"><?=$categoria['nome']?></br>
+                <?php endforeach ?>
             </td>
         </tr>
         <tr>
-            <td>
-                <button class="btn btn-primary" type="submit">Cadastrar</button>
-            </td>
+            <td><button class="btn btn-primary" type="submit">Cadastrar</button></td>
         </tr>
+
     </table>
 </form>
-<?php include("rodape.php");?>
+
+<?php include("rodape.php"); ?>
