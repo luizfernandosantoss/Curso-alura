@@ -1,5 +1,6 @@
 package br.com.bytebank.banco.modelo;
 
+
 /**
  * @author  Luiz Fernando Santos
  * Esse é classe conta
@@ -9,7 +10,7 @@ public abstract class Conta {
     protected double saldo;
     private int agencia;
     private int numero;
-    private Cliente titular;
+    private  Cliente titular;
     private static int total = 0;
 
     /**
