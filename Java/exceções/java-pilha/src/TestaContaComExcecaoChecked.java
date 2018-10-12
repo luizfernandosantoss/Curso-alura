@@ -6,5 +6,7 @@ public class TestaContaComExcecaoChecked {
         }catch (MinhaException e){
             System.out.println("Tratamento.......");
         }
+
+
     }
 }
