@@ -26,6 +26,15 @@ public abstract class Conta {
         //this.saldo = 100;
         //System.out.println("Estou criando uma conta " + this.numero);
     }
+    @Override
+    public  boolean equals(Object ref){
+        Conta conta = (Conta) ref;
+        if (this.agencia != conta.agencia || this.numero != conta.numero){
+            return false;
+        }
+        return true;
+    }
+
 
     @Override
     public String toString() {
