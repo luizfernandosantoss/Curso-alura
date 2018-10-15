@@ -4,19 +4,18 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.function.Consumer;
 import br.com.bytebank.banco.modelo.Cliente;
 import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.ContaCorrente;
 import br.com.bytebank.banco.modelo.ContaPoupanca;
 
-public class Teste {
+public class ClasseAnonima {
     public static void main(String[] args) {
         Conta cc1 = new ContaCorrente(22, 33);
         Cliente clienteCC1 = new Cliente();
         clienteCC1.setNome("Nico");
         cc1.setTitular(clienteCC1);
-        cc1.deposita(1333.0);
+        cc1.deposita(333.0);
 
         Conta cc2 = new ContaPoupanca(22, 44);
         Cliente clienteCC2 = new Cliente();
@@ -36,7 +35,7 @@ public class Teste {
         cc4.setTitular(clienteCC4);
         cc4.deposita(222.0);
 
-        List<Conta> lista = new ArrayList<>();
+        List<Conta> lista = new ArrayList<Conta>();
 
         lista.add(cc1);
         lista.add(cc2);
@@ -49,7 +48,16 @@ public class Teste {
         }
 
 
-        lista.sort( (c1, c2) -> Integer.compare(c1.getNumero(), c2.getNumero())); //Ordenando a lista utilizando o Numero
+        lista.sort( new Comparator<Conta>() {
+
+                @Override
+                public int compare(Conta c1, Conta c2) {
+
+                    return Integer.compare(c1.getNumero(), c2.getNumero());
+
+                }
+            }
+        );
 
         System.out.println();
         System.out.println("--------ORDENANDO A LISTA UTILIZANDO O NUMERO DA CONTA----------");
@@ -57,21 +65,31 @@ public class Teste {
 
 
 
+
+
+        for (Conta conta: lista) {
+            System.out.println(conta);
+        }
+
         System.out.println();
         System.out.println();
-        System.out.println();
-        System.out.println();
 
-        lista.forEach((conta) -> System.out.println(conta)); //forEach e ordenando
+        for (Conta conta: lista) {
 
-
-
+            System.out.println(conta);
+        }
 
 
 
 
+        lista.sort(new Comparator<Conta> (){
 
-        lista.sort((c1,c2) -> c1.getTitular().getNome().compareTo(c2.getTitular().getNome())); //LAMBDA
+
+            @Override
+            public int compare(Conta c1, Conta c2) {
+                return c1.getTitular().getNome().compareTo(c2.getTitular().getNome());
+            }
+        });
 
 
         System.out.println();
