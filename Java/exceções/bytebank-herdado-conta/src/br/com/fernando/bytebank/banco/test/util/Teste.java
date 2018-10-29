@@ -71,7 +71,7 @@ public class Teste {
 
 
 
-        lista.sort((c1,c2) -> c1.getTitular().getNome().compareTo(c2.getTitular().getNome())); //LAMBDA
+        lista.sort(Comparator.comparing(c -> c.getTitular().getNome())); //LAMBDA
 
 
         System.out.println();
