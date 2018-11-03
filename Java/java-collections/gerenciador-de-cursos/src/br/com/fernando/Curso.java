@@ -38,4 +38,17 @@ public class Curso {
         return Collections.unmodifiableSet(alunos);
 
     }
+
+    public boolean estaMatriculado(Aluno aluno) {
+		return  this.alunos.contains(aluno);
+    }
+
+    public Aluno buscarMatricula(int numero) {
+        for (Aluno aluno :alunos){
+            if (aluno.getMatricula()==numero){
+                return aluno;
+            }
+        }
+        throw new NoSuchElementException("matricula nao encontrado: "+numero);
+    }
 }

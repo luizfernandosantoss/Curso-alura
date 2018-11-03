@@ -1,6 +1,6 @@
 package br.com.fernando;
 
-public class TestaCurso2 {
+public class TestaBuscaAlunosNoCurso {
 
 	public static void main(String[] args) {
 
@@ -22,19 +22,17 @@ public class TestaCurso2 {
         System.out.println("Todos os alunos matriculados: ");
         
 
-//        for (Aluno aluno:javaColecoes.getAlunos()){
-//            System.out.println(aluno);
-//        }
+        for (Aluno aluno:javaColecoes.getAlunos()){
+            System.out.println(aluno);
+        }
 //        javaColecoes.getAlunos().forEach(a -> {
 //            System.out.println(a);
 //        });
 
-        System.out.println("O aluno "+ a1 +" está matriculado ?");
-        System.out.println(javaColecoes.estaMatriculado(a1));
+        System.out.println("Quem é o aluno com matricula 5617 ?");
 
-        Aluno luiz = new Aluno("Luiz Fernando",34567);
-        System.out.println("O aluno Luiz é igual a");
-        System.out.println(a1.equals(luiz));
+        Aluno aluno = javaColecoes.buscarMatricula(34567);
+        System.out.println("Aluno: "+aluno);
 
 
 
