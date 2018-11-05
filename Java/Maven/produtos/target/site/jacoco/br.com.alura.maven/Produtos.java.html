@@ -4,11 +4,11 @@ public class Produtos {
     private String nome;
     private Double preco;
 
-<span class="nc" id="L7">    public Produtos(String nome, Double preco) {</span>
-<span class="nc" id="L8">        this.nome = nome;</span>
-<span class="nc" id="L9">        this.preco = preco;</span>
+<span class="fc" id="L7">    public Produtos(String nome, Double preco) {</span>
+<span class="fc" id="L8">        this.nome = nome;</span>
+<span class="fc" id="L9">        this.preco = preco;</span>
 
-<span class="nc" id="L11">    }</span>
+<span class="fc" id="L11">    }</span>
 
     public String getNome() {
 <span class="nc" id="L14">        return nome;</span>
@@ -16,6 +16,15 @@ public class Produtos {
 
     public Double getPreco() {
 <span class="nc" id="L18">        return preco;</span>
+    }
+
+    @Override
+    public String toString() {
+<span class="nc" id="L23">        return &quot;Produtos{&quot; + &quot;nome='&quot; + nome + '\'' + &quot;, preco=&quot; + preco + '}';</span>
+    }
+
+    public double getPrecoComImposto() {
+<span class="fc" id="L27">        return preco*1.10;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

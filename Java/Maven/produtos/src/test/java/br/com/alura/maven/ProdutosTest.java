@@ -4,10 +4,10 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class ProdutoTest {
+public class ProdutosTest {
     @Test
     public void verificaPrecoComImposto(){
-        Produto bala = new Produto("juquinha",0.10);
+        Produtos bala = new Produtos("juquinha",0.10);
         assertEquals(0.11,bala.getPrecoComImposto(),0.00001);
     }
 }
