@@ -1,2 +1,4 @@
+br/com/gerenciador/servlet/NovaEmpresa.class
 br/com/gerenciador/servlet/OiServelt.class
+br/com/gerenciador/entidades/Empresa.class
 br/com/gerenciador/teste.class
