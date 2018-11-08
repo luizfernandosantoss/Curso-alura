@@ -18,4 +18,8 @@ public class Empresa {
         return id;
     }
 
+    @Override
+    public String toString() {
+        return "Empresa: " + nome;
+    }
 }

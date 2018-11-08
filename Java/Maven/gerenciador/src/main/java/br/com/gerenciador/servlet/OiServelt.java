@@ -9,6 +9,7 @@ import java.io.PrintWriter;
 
 @WebServlet(urlPatterns = "/teste")
 public class OiServelt extends HttpServlet {
+
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         PrintWriter out = resp.getWriter();
