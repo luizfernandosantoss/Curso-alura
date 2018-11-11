@@ -1,37 +1,30 @@
-<%@ page import="br.com.gerenciador.entidades.Empresa" %>
-<%@ page import="br.com.gerenciador.entidades.Banco" %>
-<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="ftm" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <html>
 <head>
-    <title>Empresa Criada</title>
+    <title>Java Standar Taglib</title>
 </head>
 <body>
 
+    <c:if test="${not empty empresa}">
+        Empresa ${empresa} Com data de Abertura <fmt:formatDate value="${dataAbertuda}"/> Cadastrada Com Sucesso
+    </c:if>
+
+    <c:if test="${empty empresa}">
+        Nenuma empresa Cadastrada
+    </c:if>
+
+
     Todas Empresa Cadastrada
 
-    <%
-        List<Empresa> empresas = (List<Empresa>) request.getAttribute("empresas");
-        for (Empresa empresa : empresas){
+    <ul>
+        <c:forEach items="${empresas}" var="empresa">
+            <li>${empresa.nome} <ftm:formatDate value="${empresa.dataAbertura}" pattern="dd/MM/yy"/></li>
 
-    %>
-
-
-    <table>
-        <tr>
-            <th>Nome</th>
-        </tr>
-        <tr>
-            <td><%=empresa%></td>
-        </tr>
-    </table>
-
-    <%
-        }
-    %>
-
-
+        </c:forEach>
+    </ul>
 
 </body>
 </html>

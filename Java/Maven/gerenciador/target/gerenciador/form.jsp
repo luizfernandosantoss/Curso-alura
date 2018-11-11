@@ -1,19 +1,16 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: luiz-santos
-  Date: 06/11/18
-  Time: 08:47
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:url value="/novaEmpresa" var="linkServletNovaEMpresa"/>
 <html>
 <head>
     <title>Formulario</title>
 </head>
 <body>
-        <form action="/gerenciador/novaEmpresa" method="POST">
+        <form action="${linkServletNovaEMpresa}" method="POST">
             Nome: <input type="text" name="nome">
-            <input type="submit">
+            Data de abertuda: <input type="text" name="dataAbertuda">
+            <input type="submit" value="Cadastrar">
         </form>
 </body>
 </html>

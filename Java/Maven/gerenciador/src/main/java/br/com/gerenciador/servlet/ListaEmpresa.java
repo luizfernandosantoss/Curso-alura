@@ -14,7 +14,7 @@ import br.com.gerenciador.entidades.Empresa;
 @WebServlet (urlPatterns = "/listaEmpresa",name = "listaEmpresa")
 public class ListaEmpresa extends HttpServlet {
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Empresa> empresas =  Banco.getLista();
         RequestDispatcher rd = request.getRequestDispatcher("listaEmpresa.jsp");
         request.setAttribute("empresas",empresas);
