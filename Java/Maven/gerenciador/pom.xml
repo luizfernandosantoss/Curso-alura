@@ -27,6 +27,12 @@
       <scope>test</scope>
     </dependency>
     <dependency>
+      <groupId>javax.servlet.jsp.jstl</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+    </dependency>
+
+    <dependency>
 
       <groupId>br.com.alura.maven</groupId>
       <artifactId>produtos</artifactId>
@@ -50,7 +56,6 @@
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
-        <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.0.2</version>

@@ -7,11 +7,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2513df5d-f21c-490b-9e23-4514173feccd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/gerenciador/entidades/Banco.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/gerenciador/servlet/ListaEmpresa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/listaEmpresa.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/novaEmpresaCriada.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/gerenciador/entidades/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/gerenciador/entidades/Empresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/gerenciador/entidades/Banco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/gerenciador/entidades/Banco.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/gerenciador/servlet/NovaEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/gerenciador/servlet/NovaEmpresa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/gerenciador/servlet/OiServelt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/gerenciador/servlet/OiServelt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/gerenciador/teste.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/gerenciador/entidades/Banco.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/gerenciador/entidades/Banco.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/gerenciador/servlet/NovaEmpresa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/gerenciador/servlet/NovaEmpresa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/gerenciador/servlet/OiServelt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/gerenciador/servlet/OiServelt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/gerenciador/teste.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/gerenciador/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/gerenciador/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/gerenciador/WEB-INF/classes/br/com/gerenciador/entidades/Banco.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/gerenciador/WEB-INF/classes/br/com/gerenciador/entidades/Banco.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/gerenciador/WEB-INF/classes/br/com/gerenciador/servlet/NovaEmpresa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/gerenciador/WEB-INF/classes/br/com/gerenciador/servlet/NovaEmpresa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/gerenciador/WEB-INF/classes/br/com/gerenciador/servlet/OiServelt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/gerenciador/WEB-INF/classes/br/com/gerenciador/servlet/OiServelt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/gerenciador/WEB-INF/classes/br/com/gerenciador/teste.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/gerenciador/WEB-INF/lib/produtos-1.0.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/gerenciador/WEB-INF/lib/produtos-1.0.3.jar" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,96 +79,54 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="630853415">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="1" />
+          <entry key="java" value="41" />
+          <entry key="jsp" value="26" />
+          <entry key="xml" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="1" />
+          <entry key="JAVA" value="41" />
+          <entry key="JSP" value="26" />
+          <entry key="XML" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="class" value="1" />
+          <entry key="java" value="656" />
+          <entry key="jsp" value="547" />
+          <entry key="xml" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CLASS" value="1" />
+          <entry key="JAVA" value="656" />
+          <entry key="JSP" value="547" />
+          <entry key="XML" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/gerenciador/teste.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/gerenciador/servlet/OiServelt.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/gerenciador/servlet/NovaEmpresa.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="25" column="56" lean-forward="true" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/gerenciador/entidades/Banco.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#285#286#0" expanded="true" />
-                <element signature="e#313#314#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/form.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/gerenciador/entidades/Empresa.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-              <folding>
-                <element signature="e#275#276#0" expanded="true" />
-                <element signature="e#300#301#0" expanded="true" />
-                <element signature="e#342#343#0" expanded="true" />
-                <element signature="e#381#382#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+              <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -164,8 +136,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -175,17 +147,21 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/gerenciador/servlet/OiServlet.java" />
         <option value="$PROJECT_DIR$/src/test/java/br/com/alura/maven/AppTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/gerenciador/servlet/Servlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/form.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/form.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/gerenciador/servlet/OiServelt.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/gerenciador/entidades/Banco.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/gerenciador/entidades/Empresa.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/gerenciador/entidades/Banco.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/gerenciador/servlet/ListaEmpresa.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/gerenciador/servlet/OiServelt.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/gerenciador/servlet/NovaEmpresa.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/listaEmpresa.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/gerenciador/teste.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/novaEmpresaCriada.jsp" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -219,10 +195,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1600" />
-    <option name="y" value="-4" />
-    <option name="width" value="1024" />
-    <option name="height" value="772" />
+    <option name="x" value="-1928" />
+    <option name="y" value="-138" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -231,6 +207,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -269,78 +246,35 @@
               <item name="gerenciador" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gerenciador" type="462c0819:PsiDirectoryNode" />
-              <item name="entidades" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gerenciador" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gerenciador" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gerenciador" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gerenciador" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gerenciador" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gerenciador" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gerenciador" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gerenciador" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gerenciador" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gerenciador" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gerenciador" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gerenciador" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gerenciador" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541707466066" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="br.com.gerenciador.entidades" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projetos\Curso-alura\Java\Maven\gerenciador\src\main\webapp" />
       <recent name="$PROJECT_DIR$/src/test/java/br/com/alura/maven" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="br.com.gerenciador.entidades" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -355,7 +289,79 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JBoss Server.Unnamed">
+  <component name="RunManager" selected="JBoss Server.Unnamed (1)">
+    <configuration name="Unnamed (1)" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 14.0.1.Final" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/gerenciador/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="gerenciador:war exploded">
+          <settings />
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="SERVER" />
+        <option name="BINDING_SET_NAME" value="" />
+        <option name="DOMAIN" value="false" />
+        <option name="SERVER_GROUP" value="main-server-group" />
+        <option name="USERNAME" value="" />
+        <option name="PASSWORD" value="" />
+      </server-settings>
+      <predefined_log_file id="JBoss" enabled="true" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="53414" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="gerenciador:war exploded" />
+        </option>
+      </method>
+    </configuration>
     <configuration name="Unnamed" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 14.0.0.Final" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
@@ -435,6 +441,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JBoss Server.Unnamed (1)" />
       <item itemvalue="JBoss Server.Unnamed" />
       <item itemvalue="JUnit.All in gerenciador" />
     </list>
@@ -459,6 +466,7 @@
       <workItem from="1541502253131" duration="202000" />
       <workItem from="1541502495738" duration="278000" />
       <workItem from="1541503149868" duration="7170000" />
+      <workItem from="1541943988374" duration="5490000" />
     </task>
     <servers />
   </component>
@@ -468,7 +476,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12886000" />
+    <option name="totallyTimeSpent" value="18376000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -480,25 +488,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1599" y="-11" width="1026" height="780" extended-state="6" />
+    <frame x="-1928" y="-138" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.498708" visible="true" weight="0.26482618" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49793816" visible="true" weight="0.25746268" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
-      <window_info id="Web" order="7" sideWeight="0.501292" side_tool="true" weight="0.24948876" />
+      <window_info id="Web" order="7" sideWeight="0.50206184" side_tool="true" weight="0.25906184" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32925472" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32919255" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39906833" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39822024" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32919255" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32919255" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32814237" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32919255" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32919255" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.33074534" />
@@ -531,34 +539,83 @@
     <entry file="file://$PROJECT_DIR$/target/surefire-reports/2018-11-05T17-04-41_222.dumpstream" />
     <entry file="file://$PROJECT_DIR$/src/test/java/br/com/alura/gerenciador/ProdutosTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/br/com/alura/gerenciador/AppTest.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/form.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
+        <state relative-caret-position="238">
           <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar!/javax/servlet/ServletRequest.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="252">
+          <caret line="63" column="28" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/gerenciador/entidades/Empresa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#383#384#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/gerenciador/entidades/Banco.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1-sources.jar!/javax/servlet/ServletRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="338" column="48" selection-start-line="338" selection-start-column="42" selection-end-line="338" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/gerenciador/servlet/ListaEmpresa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/gerenciador/servlet/NovaEmpresa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/gerenciador/servlet/OiServelt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="255">
+          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -567,40 +624,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/gerenciador/teste.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
+        <state relative-caret-position="34">
           <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/gerenciador/entidades/Banco.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/listaEmpresa.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/gerenciador/entidades/Empresa.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/novaEmpresaCriada.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="e#275#276#0" expanded="true" />
-            <element signature="e#300#301#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/gerenciador/servlet/NovaEmpresa.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="25" column="56" lean-forward="true" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
         </state>
       </provider>
     </entry>
