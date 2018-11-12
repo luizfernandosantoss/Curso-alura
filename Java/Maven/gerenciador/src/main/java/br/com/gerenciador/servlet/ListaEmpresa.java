@@ -11,7 +11,7 @@ import java.util.List;
 import br.com.gerenciador.entidades.Banco;
 import br.com.gerenciador.entidades.Empresa;
 
-@WebServlet (urlPatterns = "/listaEmpresa",name = "listaEmpresa")
+@WebServlet (urlPatterns = "/listaEmpresas",name = "listaEmpresas")
 public class ListaEmpresa extends HttpServlet {
 
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

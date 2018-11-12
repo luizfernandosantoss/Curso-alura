@@ -32,12 +32,14 @@ public class NovaEmpresa extends HttpServlet {
         Banco banco = new Banco();
         banco.adiciona(empresa);
         System.out.println("Empresa "+empresa.getNome()+" Cadastrada com Sucesso");
-
-        //Chamar JSP
-        RequestDispatcher rd = request.getRequestDispatcher("/listaEmpresa");
         request.setAttribute("empresa",empresa.getNome());
-        request.setAttribute("dataAbertuda",empresa.getDataAbertura());
-        rd.forward(request,response);
+
+        response.sendRedirect("listaEmpresas");
+//        //Chamar JSP
+//        RequestDispatcher rd = request.getRequestDispatcher("/listaEmpresa");
+//        request.setAttribute("empresa",empresa.getNome());
+//        request.setAttribute("dataAbertuda",empresa.getDataAbertura());
+//        rd.forward(request,response);
 
 
     }

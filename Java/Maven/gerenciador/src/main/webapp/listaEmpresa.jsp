@@ -7,21 +7,15 @@
     <title>Java Standar Taglib</title>
 </head>
 <body>
-
-    <c:if test="${not empty empresa}">
-        Empresa ${empresa} Com data de Abertura <fmt:formatDate value="${dataAbertuda}"/> Cadastrada Com Sucesso
-    </c:if>
-
-    <c:if test="${empty empresa}">
-        Nenuma empresa Cadastrada
-    </c:if>
-
-
     Todas Empresa Cadastrada
-
+    <a href="form.jsp">Cadastrar Empresa</a>
     <ul>
         <c:forEach items="${empresas}" var="empresa">
-            <li>${empresa.nome} <ftm:formatDate value="${empresa.dataAbertura}" pattern="dd/MM/yy"/></li>
+            <li>
+                    ${empresa.id}  ${empresa.nome} <ftm:formatDate value="${empresa.dataAbertura}" pattern="dd/MM/yy"/>
+                    <a href="/removerEmpresa?id=${empresa.id}">remover</a>
+                    <a href="/mostraEmpresa?id=${empresa.id}">editar</a>
+            </li>
 
         </c:forEach>
     </ul>

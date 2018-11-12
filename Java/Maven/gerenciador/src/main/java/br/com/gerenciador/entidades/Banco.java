@@ -1,5 +1,6 @@
 package br.com.gerenciador.entidades;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,8 +20,23 @@ public class Banco {
         lista.add(empresa);
 
     }
+    public void remove(Empresa empresa) {
+        lista.remove(empresa);
+    }
 
     public static List<Empresa> getLista() {
         return lista;
+    }
+
+
+    public Empresa buscarEmpresaPorId(Integer id) {
+
+        for (Empresa empresa:lista){
+            if (empresa.getId().equals(id)){
+                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+                return empresa;
+            }
+        }
+        return null;
     }
 }

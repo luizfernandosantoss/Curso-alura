@@ -1,5 +1,8 @@
+br\com\gerenciador\servlet\RemoverEmpresa.class
+br\com\gerenciador\servlet\OiServelt.class
+br\com\gerenciador\servlet\NovaEmpresa.class
 br\com\gerenciador\entidades\Banco.class
 br\com\gerenciador\servlet\ListaEmpresa.class
 br\com\gerenciador\entidades\Empresa.class
-br\com\gerenciador\servlet\OiServelt.class
-br\com\gerenciador\servlet\NovaEmpresa.class
+br\com\gerenciador\servlet\MostraEmpresa.class
+br\com\gerenciador\servlet\EditarEmpresa.class
