@@ -9,7 +9,7 @@
     <title>Formulario</title>
 </head>
 <body>
-
+    <c:import url="logout-parcial.jsp" />
         <form action="entrada" method="POST">
             <input type="hidden" value="${empresa.id}" name="id">
             Nome: <input type="text" value="${empresa.nome}" name="nome">

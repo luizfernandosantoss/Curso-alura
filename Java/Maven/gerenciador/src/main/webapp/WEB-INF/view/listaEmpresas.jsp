@@ -9,6 +9,9 @@
     <title>Java Standar Taglib</title>
 </head>
 <body>
+
+    <c:import url="logout-parcial.jsp" />
+
     Todas Empresa Cadastrada
     <a href="form.jsp">Cadastrar Empresa</a>
     <ul>

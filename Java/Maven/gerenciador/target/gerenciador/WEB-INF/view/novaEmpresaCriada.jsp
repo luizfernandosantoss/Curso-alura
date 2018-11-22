@@ -6,7 +6,7 @@
     <title>Empresa Criada</title>
 </head>
 <body>
-
+    <c:import url="logout-parcial.jsp" />
     <c:if test="${not empty empresa}">
         Empresa ${empresa} Com data de Abertura <fmt:formatDate value="${dataAbertuda}"/> Cadastrada Com Sucesso
     </c:if>

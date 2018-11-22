@@ -10,7 +10,6 @@ import java.util.List;
 import br.com.gerenciador.modelo.Banco;
 import br.com.gerenciador.modelo.Empresa;
 
-@WebServlet(name = "removerEmpresa")
 public class RemoverEmpresa extends HttpServlet implements Acao{
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -21,7 +20,7 @@ public class RemoverEmpresa extends HttpServlet implements Acao{
     public String executa(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         Integer id = Integer.valueOf(request.getParameter("id"));
-        List<Empresa> empresas = Banco.getLista();
+        List<Empresa> empresas = Banco.getListaEmpresas();
         Banco banco = new Banco();
 
         for (Empresa empresa:empresas){

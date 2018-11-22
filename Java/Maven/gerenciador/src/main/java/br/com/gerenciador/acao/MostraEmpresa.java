@@ -9,9 +9,8 @@ import java.io.IOException;
 import br.com.gerenciador.modelo.Banco;
 import br.com.gerenciador.modelo.Empresa;
 
-@WebServlet(name = "mostraEmpresa")
 public class MostraEmpresa extends HttpServlet implements Acao {
-  
+
     public String executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         Integer id = Integer.valueOf(request.getParameter("id"));

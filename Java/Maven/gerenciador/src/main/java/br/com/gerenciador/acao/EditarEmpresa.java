@@ -12,7 +12,6 @@ import java.util.Date;
 import br.com.gerenciador.modelo.Banco;
 import br.com.gerenciador.modelo.Empresa;
 
-@WebServlet(name = "editarEmpresa")
 public class EditarEmpresa extends HttpServlet implements Acao{
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

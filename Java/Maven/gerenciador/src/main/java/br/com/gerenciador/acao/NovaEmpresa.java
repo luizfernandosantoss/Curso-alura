@@ -12,7 +12,6 @@ import java.util.Date;
 import br.com.gerenciador.modelo.Banco;
 import br.com.gerenciador.modelo.Empresa;
 
-@WebServlet(name = "novaEmpresa")
 public class NovaEmpresa extends HttpServlet implements Acao {
     private static final long serialVersionUID = 1L;
 

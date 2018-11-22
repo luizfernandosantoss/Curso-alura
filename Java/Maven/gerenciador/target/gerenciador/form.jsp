@@ -7,6 +7,7 @@
     <title>Formulario</title>
 </head>
 <body>
+    <c:import url="WEB-INF/view/logout-parcial.jsp" />
         <form action="${linkServletNovaEMpresa}" method="POST">
             Nome: <input type="text" name="nome">
             Data de abertuda: <input type="text" name="dataAbertuda">
