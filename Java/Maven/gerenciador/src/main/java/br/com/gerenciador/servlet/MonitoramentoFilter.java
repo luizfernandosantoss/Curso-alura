@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebFilter("/entrada")
+//@WebFilter("/entrada")
 public class MonitoramentoFilter  implements Filter {
 
     @Override
@@ -17,10 +17,11 @@ public class MonitoramentoFilter  implements Filter {
 
         long antes =  System.currentTimeMillis();
 
-        chain.doFilter(request,response);
         String acao = request.getParameter("acao");
         long depois =  System.currentTimeMillis();
         System.out.println("Tempo de execução da Ação: "+ acao +" "+ (depois-antes));
+
+        chain.doFilter(request,response);
     }
 
 }
