@@ -17,7 +17,7 @@ import static java.lang.String.format;
 public class LerArquivo {
     public static void main(String[] args) throws IOException, SQLException {
         SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
-        List<HistoricoAssertividade> lista = new ArrayList<>();
+        List<HistoricoAssertividade> lista = new ArrayList();
         Scanner scanner = new Scanner(new File("Historico.csv"),"ISO-8859-1");
         while (scanner.hasNext()){
             String linha =scanner.nextLine();

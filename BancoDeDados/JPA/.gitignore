@@ -4,8 +4,11 @@ target/
 build/
 out/
 gen/
+.idea/
 .gradle/
+src/main/java/br/com/chatbot/Conexao/Conexao.java
 local.properties
+tomcat.8080/
 
 ### IntelliJ
 .idea/
@@ -22,6 +25,7 @@ local.properties
 ### Package Files
 *.jar
 *.war
+*.ear
 *.ear
 
 ### Other

@@ -38,7 +38,7 @@ public class HistoricoAssertividadeDao {
 
         Connection con = Conexao.conectar();
         String sql = "SELECT *FROM historicoassertividade";
-        List<HistoricoAssertividade> listaHistoricoAssertividade = new ArrayList<>();
+        List<HistoricoAssertividade> listaHistoricoAssertividade = new ArrayList();
 
         try{
             PreparedStatement preparador = con.prepareStatement(sql);
@@ -46,6 +46,7 @@ public class HistoricoAssertividadeDao {
 
             while(resultado.next()){
                 HistoricoAssertividade historicoAssertividade = new HistoricoAssertividade();
+                historicoAssertividade.setId(resultado.getInt("id"));
                 historicoAssertividade.setPerguntaUsuario(resultado.getString("pergunta_usuario"));
                 historicoAssertividade.setRespostaBot(resultado.getString("resposta_bot"));
                 historicoAssertividade.setAnaliseHistorico(resultado.getString("analise_efetuada"));
