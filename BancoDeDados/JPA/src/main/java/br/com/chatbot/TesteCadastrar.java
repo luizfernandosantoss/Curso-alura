@@ -5,6 +5,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.util.Date;
 import br.com.chatbot.entidades.HistoricoAssertividade;
+import br.com.chatbot.util.JPAUtil;
 
 public class TesteCadastrar {
     public static void main(String[] args) {
@@ -15,15 +16,14 @@ public class TesteCadastrar {
         historicoAssertividade.setAnaliseHistorico("Teste");
         historicoAssertividade.setData(new Date());
 
-        EntityManagerFactory emf =  Persistence.createEntityManagerFactory("analisebot");
-        EntityManager em = emf.createEntityManager();
+        EntityManager manager = new JPAUtil().getEntityManager();
 
+        manager.getTransaction().begin();
+        manager.persist(historicoAssertividade);
+        historicoAssertividade.setRespostaBot("RECEBE Outra resposta");
 
-        em.getTransaction().begin();
-        em.persist(historicoAssertividade);
-        em.getTransaction().commit();
+        manager.getTransaction().commit();
 
-        em.close();
-        emf.close();
+        manager.close();
     }
 }
