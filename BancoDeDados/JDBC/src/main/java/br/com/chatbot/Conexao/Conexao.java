@@ -1,4 +1,4 @@
-package br.com.chatbot.Conexao;
+package br.com.jpa;
 
 
 import java.sql.Connection;
@@ -11,7 +11,7 @@ public class Conexao {
         Connection con = null;
 
         try {
-            con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:52774/analisebot?useTimezone=true&serverTimezone=UTC", "root", "");
+            con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:52774/financas?useTimezone=true&serverTimezone=UTC", "root", "");
             System.out.println("Conectado com sucesso!!!");
         } catch (SQLException e) {
             e.printStackTrace();
