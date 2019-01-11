@@ -9,7 +9,7 @@ import br.com.jpa.modelo.TipoMovimentacao;
 import br.com.jpa.util.JPAUtil;
 import org.hibernate.hql.internal.QueryExecutionRequestException;
 
-public class TesteBuscarMovimentacaoJPQL {
+public class TesteBuscarMovimentacaoPorContaJPQL {
 
     public static void main(String[] args) {
 
@@ -21,10 +21,10 @@ public class TesteBuscarMovimentacaoJPQL {
         EntityManager em = new JPAUtil().getEntityManager();
         em.getTransaction().begin();
 
-        String jpql = "select m from Movimentacao m where m.conta.id = :pConta"+
+        String jpql = "select m from Movimentacao m where m.conta = :pConta"+
                         " AND m.tipo = :pMovimentacao";
         Query query = em.createQuery(jpql);
-        query.setParameter("pConta",conta.getId());
+        query.setParameter("pConta",conta);
         query.setParameter("pMovimentacao",TipoMovimentacao.ENTRADA);
         List<Movimentacao> resultado = query.getResultList();
 
