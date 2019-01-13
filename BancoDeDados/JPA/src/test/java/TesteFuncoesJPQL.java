@@ -1,9 +1,7 @@
 import javax.persistence.EntityManager;
-import javax.persistence.Query;
-import java.math.BigDecimal;
 import java.util.List;
+import br.com.jpa.dao.MovimentacaoDao;
 import br.com.jpa.modelo.Conta;
-import br.com.jpa.modelo.Movimentacao;
 import br.com.jpa.modelo.TipoMovimentacao;
 import br.com.jpa.util.JPAUtil;
 
@@ -19,18 +17,17 @@ public class TesteFuncoesJPQL {
         EntityManager em = new JPAUtil().getEntityManager();
         em.getTransaction().begin();
 
-        String jpql = "select avg (m.valor) from Movimentacao m where m.conta = :pConta"+
-                        " AND m.tipo = :pMovimentacao"+
-                        " order by m.valor desc";
-        Query query = em.createQuery(jpql);
-        query.setParameter("pConta",conta);
-        query.setParameter("pMovimentacao",TipoMovimentacao.SAIDA);
-        Double  media = (Double) query.getSingleResult();
+        MovimentacaoDao dao = new MovimentacaoDao(em);
+        List<Double> medias = dao.mediasPorDiaETipo(conta,TipoMovimentacao.SAIDA);
 
-        System.out.println("A media dos valores da movimentações e "+media);
+        System.out.println("A media dos valores da movimentações e "+medias);
+        int cont = 1;
+        for (Double media:medias){
+            System.out.println("media do "+cont+" dia "+media);
+            cont++;
+        }
 
 
-        em.getTransaction().commit();
         em.close();
 
     }
