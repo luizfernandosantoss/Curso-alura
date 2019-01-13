@@ -7,7 +7,7 @@ import java.util.List;
 
 @Entity
 @NamedQuery(query ="select avg (m.valor) from Movimentacao m where m.conta = :pConta"+
-        " AND m.tipo = :pMovimentacao"+
+        " AND m.tipo = :pTipo"+
         " group by day(m.calendar), month(m.calendar), year(m.calendar)",name = "mediasPorDiaETipo")
 public class Movimentacao {
 

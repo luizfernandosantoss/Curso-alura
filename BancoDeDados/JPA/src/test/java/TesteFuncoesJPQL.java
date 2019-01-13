@@ -1,4 +1,5 @@
 import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
 import java.util.List;
 import br.com.jpa.dao.MovimentacaoDao;
 import br.com.jpa.modelo.Conta;
@@ -17,8 +18,11 @@ public class TesteFuncoesJPQL {
         EntityManager em = new JPAUtil().getEntityManager();
         em.getTransaction().begin();
 
-        MovimentacaoDao dao = new MovimentacaoDao(em);
-        List<Double> medias = dao.mediasPorDiaETipo(conta,TipoMovimentacao.SAIDA);
+        TypedQuery<Double> typedQuery  =  em.createNamedQuery("mediasPorDiaETipo",Double.class);
+        typedQuery.setParameter("pConta",conta);
+        typedQuery.setParameter("pTipo",TipoMovimentacao.ENTRADA);
+
+        List<Double> medias = typedQuery.getResultList();
 
         System.out.println("A media dos valores da movimentações e "+medias);
         int cont = 1;

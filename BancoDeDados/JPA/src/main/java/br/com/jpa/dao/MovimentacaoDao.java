@@ -18,12 +18,12 @@ public class MovimentacaoDao {
 
 
         String jpql = "select avg (m.valor) from Movimentacao m where m.conta = :pConta"+
-                " AND m.tipo = :pMovimentacao"+
+                " AND m.tipo = :pTipo"+
                 " group by day(m.calendar), month(m.calendar), year(m.calendar)";
 
         Query query = em.createQuery(jpql);
         query.setParameter("pConta",conta);
-        query.setParameter("pMovimentacao", tipoMovimentacao);
+        query.setParameter("pTipo", tipoMovimentacao);
         List<Double>  medias =  query.getResultList();
 
         return medias;
