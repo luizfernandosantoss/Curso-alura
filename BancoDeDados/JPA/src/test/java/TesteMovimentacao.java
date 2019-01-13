@@ -1,5 +1,6 @@
 import javax.persistence.EntityManager;
 import java.math.BigDecimal;
+import java.util.Calendar;
 import java.util.Date;
 import br.com.jpa.modelo.Conta;
 import br.com.jpa.modelo.Movimentacao;
@@ -20,7 +21,7 @@ public class TesteMovimentacao {
         Movimentacao movimentacao = new Movimentacao();
 
         movimentacao.setDescricao("Churrascaria");
-        movimentacao.setCalendar(new Date());
+        movimentacao.setCalendar(Calendar.getInstance());
         movimentacao.setTipo(TipoMovimentacao.SAIDA);
         movimentacao.setValor(new BigDecimal("100.0"));
 

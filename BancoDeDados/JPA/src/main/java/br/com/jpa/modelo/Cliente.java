@@ -10,7 +10,7 @@ public class Cliente {
     private Integer id;
 
     private String nome;
-    private String profissão;
+    private String profissao;
     private String endereco;
 
     @OneToOne
@@ -33,12 +33,12 @@ public class Cliente {
         this.nome = nome;
     }
 
-    public String getProfissão() {
-        return profissão;
+    public String getProfissao() {
+        return profissao;
     }
 
-    public void setProfissão(String profissão) {
-        this.profissão = profissão;
+    public void setProfissao(String profissao) {
+        this.profissao = profissao;
     }
 
     public String getEndereco() {

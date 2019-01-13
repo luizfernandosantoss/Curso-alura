@@ -2,7 +2,7 @@ package br.com.jpa.modelo;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.util.Date;
+import java.util.Calendar;
 import java.util.List;
 
 @Entity
@@ -18,7 +18,7 @@ public class Movimentacao {
     private TipoMovimentacao tipo;
 
     @Temporal(TemporalType.TIMESTAMP)
-    private Date calendar;
+    private Calendar calendar;
 
     private String descricao;
 
@@ -52,11 +52,11 @@ public class Movimentacao {
         this.tipo = tipo;
     }
 
-    public Date getCalendar() {
+    public Calendar getCalendar() {
         return calendar;
     }
 
-    public void setCalendar(Date calendar) {
+    public void setCalendar(Calendar calendar) {
         this.calendar = calendar;
     }
 
