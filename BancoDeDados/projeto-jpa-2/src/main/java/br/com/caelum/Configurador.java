@@ -10,9 +10,11 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.format.FormatterRegistry;
+import org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
@@ -36,7 +38,17 @@ public class Configurador extends WebMvcConfigurerAdapter {
 		
 		return produtos;
 	}
-	
+	//Para carregar relacionamento lazy
+	@Bean
+	public OpenEntityManagerInViewInterceptor getOpenEntityManagerInViewInterceptor(){
+		return new OpenEntityManagerInViewInterceptor();
+	}
+
+	@Override
+	public void addInterceptors(InterceptorRegistry registry) {
+		registry.addWebRequestInterceptor(getOpenEntityManagerInViewInterceptor());
+	}
+
 	@Bean
 	public List<Categoria> categorias(CategoriaDao categoriaDao) { 
 		List<Categoria> categorias = categoriaDao.getCategorias();
