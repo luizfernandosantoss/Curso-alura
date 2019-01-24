@@ -8,7 +8,7 @@
     <title>Livros de Java, Android, iPhone, Ruby, PHP e muito mais - Casa do Código</title></head>
 <body>
     <form:form action="/produtos" method="POST"
-               commandName= "produto">
+               commandName= "produto" enctype="multipart/form-data">
         <div>
             <label>Titulo</label>
             <form:input path="titulo"/>
@@ -36,6 +36,10 @@
                <form:hidden path="precos[${status.index}].tipo" value="${tipoPreco}"/>
            </div>
        </c:forEach>
+        <div>
+            <label>Sumário</label>
+            <input name="sumario" type="file">
+        </div>
         <button type="submit">Cadastrar</button>
     </form:form>
 </body>
