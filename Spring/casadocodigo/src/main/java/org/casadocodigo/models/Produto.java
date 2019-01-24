@@ -1,7 +1,9 @@
 package org.casadocodigo.models;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
-import java.lang.reflect.Array;
+import java.util.Calendar;
 import java.util.List;
 
 @Entity
@@ -15,6 +17,8 @@ public class Produto  {
     private String titulo;
     private String descricao;
     private int paginas;
+    @DateTimeFormat
+    private Calendar dataLancamento;
     //Adiciona o preço como parte do produto
     @ElementCollection
     private List<Preco> precos;
@@ -55,6 +59,13 @@ public class Produto  {
     }
 
 
+    public Calendar getDataLancamento() {
+        return dataLancamento;
+    }
+
+    public void setDataLancamento(Calendar dataLancamento) {
+        this.dataLancamento = dataLancamento;
+    }
 
     public List<Preco> getPrecos() {
         return precos;
@@ -63,6 +74,7 @@ public class Produto  {
     public void setPrecos(List<Preco> precos) {
         this.precos = precos;
     }
+
 
 }
 
