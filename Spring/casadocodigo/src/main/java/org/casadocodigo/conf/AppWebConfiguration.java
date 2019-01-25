@@ -4,6 +4,7 @@ package org.casadocodigo.conf;
 import org.casadocodigo.controllers.HomeController;
 import org.casadocodigo.controllers.ProdutosController;
 import org.casadocodigo.daos.ProdutoDao;
+import org.casadocodigo.infra.FileSaver;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -18,7 +19,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @EnableWebMvc
-@ComponentScan(basePackageClasses = {HomeController.class, ProdutoDao.class})
+@ComponentScan(basePackageClasses = {HomeController.class, ProdutoDao.class, FileSaver.class})
 public class AppWebConfiguration {
     @Bean
     public InternalResourceViewResolver internalResourceViewResolver(){

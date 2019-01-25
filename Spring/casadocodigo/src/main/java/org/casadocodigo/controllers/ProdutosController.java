@@ -1,8 +1,7 @@
 package org.casadocodigo.controllers;
 
-import javax.validation.Valid;
-import java.util.List;
 import org.casadocodigo.daos.ProdutoDao;
+import org.casadocodigo.infra.FileSaver;
 import org.casadocodigo.models.Produto;
 import org.casadocodigo.models.TipoPreco;
 import org.casadocodigo.validation.ProdutoValidation;
@@ -17,11 +16,17 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.validation.Valid;
+import java.util.List;
+
 @Controller
 public class ProdutosController {
 
     @Autowired
     private ProdutoDao produtoDao;
+
+    @Autowired
+    private FileSaver fileSaver;
 
     @InitBinder
     public void iniBinder(WebDataBinder binder){
@@ -36,17 +41,21 @@ public class ProdutosController {
         return modelAndView;
     }
 
-    @RequestMapping(method=RequestMethod.POST)
-    public ModelAndView gravar(MultipartFile sumario, @Valid Produto produto, BindingResult result,
-                               RedirectAttributes redirectAttributes) {
+    @RequestMapping(value = "/produtos",method=RequestMethod.POST)
+    public ModelAndView gravar(MultipartFile sumario, @Valid Produto produto,
+                               BindingResult result, RedirectAttributes redirectAttributes) {
 
-        System.out.println(sumario.getOriginalFilename());
-
-        if (result.hasErrors()) {
+        if(result.hasErrors()) {
             return form(produto);
         }
+
+        String path = fileSaver.write("arquivos-sumario", sumario);
+        produto.setSumarioPath(path);
+
         produtoDao.gravar(produto);
+
         redirectAttributes.addFlashAttribute("sucesso", "Produto cadastrado com sucesso!");
+
         return new ModelAndView("redirect:produtos");
     }
 
