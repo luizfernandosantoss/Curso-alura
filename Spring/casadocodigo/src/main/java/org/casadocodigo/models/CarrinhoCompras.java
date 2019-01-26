@@ -1,11 +1,15 @@
 package org.casadocodigo.models;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.WebApplicationContext;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 @Component
+//Escopo padrçai do Spring compartinhando a mesmo informações entre usuarios @Scope(value = WebApplicationContext.SCOPE_APPLICATION)
+@Scope(value = WebApplicationContext.SCOPE_SESSION)
 public class CarrinhoCompras {
 
 
