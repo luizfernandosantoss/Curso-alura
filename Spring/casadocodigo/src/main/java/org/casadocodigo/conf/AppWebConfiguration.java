@@ -5,6 +5,7 @@ import org.casadocodigo.controllers.HomeController;
 import org.casadocodigo.controllers.ProdutosController;
 import org.casadocodigo.daos.ProdutoDao;
 import org.casadocodigo.infra.FileSaver;
+import org.casadocodigo.models.CarrinhoCompras;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -21,13 +22,18 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @EnableWebMvc
-@ComponentScan(basePackageClasses = {HomeController.class, ProdutoDao.class, FileSaver.class})
+@ComponentScan(basePackageClasses = {HomeController.class, ProdutoDao.class, FileSaver.class, CarrinhoCompras.class})
 public class AppWebConfiguration extends WebMvcConfigurerAdapter {
     @Bean
     public InternalResourceViewResolver internalResourceViewResolver(){
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
         resolver.setPrefix("/WEB-INF/views/");
         resolver.setSuffix(".jsp");
+
+        //deixar todos os atribuidos disponivel para JSP, isso coloca em risco a aplicação
+        //resolver.setExposeContextBeansAsAttributes(true);
+
+        resolver.setExposedContextBeanNames("carrinhoCompras");
         return resolver;
     }
 

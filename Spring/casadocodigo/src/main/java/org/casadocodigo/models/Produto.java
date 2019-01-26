@@ -5,6 +5,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 public class Produto  {
@@ -36,6 +37,19 @@ public class Produto  {
                 ", sumarioPath='" + sumarioPath + '\'' +
                 ", precos=" + precos +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Produto produto = (Produto) o;
+        return id == produto.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 
     public String getTitulo() {
