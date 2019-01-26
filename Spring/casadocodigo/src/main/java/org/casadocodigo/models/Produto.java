@@ -25,10 +25,17 @@ public class Produto  {
     private List<Preco> precos;
 
 
-
     @Override
     public String toString() {
-        return "Produto{" + "titulo='" + titulo + '\'' + ", descricao='" + descricao + '\'' + ", paginas=" + paginas + '}';
+        return "Produto{" +
+                "id=" + id +
+                ", titulo='" + titulo + '\'' +
+                ", descricao='" + descricao + '\'' +
+                ", paginas=" + paginas +
+                ", dataLancamento=" + dataLancamento +
+                ", sumarioPath='" + sumarioPath + '\'' +
+                ", precos=" + precos +
+                '}';
     }
 
     public String getTitulo() {

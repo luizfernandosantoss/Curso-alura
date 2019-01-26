@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
@@ -20,6 +21,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @Controller
+@RequestMapping("/produtos")
 public class ProdutosController {
 
     @Autowired
@@ -34,14 +36,14 @@ public class ProdutosController {
 
     }
 
-    @RequestMapping("/produtos/form")
+    @RequestMapping("/form")
     public ModelAndView form(Produto produto){
         ModelAndView modelAndView = new ModelAndView("produtos/form");
         modelAndView.addObject("tipos",TipoPreco.values());
         return modelAndView;
     }
 
-    @RequestMapping(value = "/produtos",method=RequestMethod.POST)
+    @RequestMapping(method=RequestMethod.POST)
     public ModelAndView gravar(MultipartFile sumario, @Valid Produto produto,
                                BindingResult result, RedirectAttributes redirectAttributes) {
 
@@ -59,14 +61,21 @@ public class ProdutosController {
         return new ModelAndView("redirect:produtos");
     }
 
-    @RequestMapping(value = "/produtos",method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     public ModelAndView lista(){
         ModelAndView modelAndView= new ModelAndView("produtos/lista");
         List<Produto> produtos = produtoDao.listaProduto();
-        System.out.println(produtos);
         modelAndView.addObject("produtos", produtos);
         return modelAndView;
 
     }
+    @RequestMapping("/detalhes/{id}")
+    public ModelAndView detalhes(@PathVariable("id") Integer id){
+        ModelAndView modelAndView = new ModelAndView("produtos/detalhes");
+        Produto produto = produtoDao.buscarPorID(id);
+        modelAndView.addObject("produto",produto);
+        return modelAndView;
+    }
+
 
 }

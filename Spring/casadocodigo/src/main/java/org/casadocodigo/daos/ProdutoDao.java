@@ -25,4 +25,12 @@ public class ProdutoDao {
         return produtos;
     }
 
+    public Produto buscarPorID(Integer id) {
+        String jpql = "select distinct(p) from Produto p "
+                    +"join fetch p.precos precos where p.id = :id";
+        return  manager.createQuery(jpql,Produto.class)
+                .setParameter("id",id)
+                .getSingleResult();
+
+    }
 }
