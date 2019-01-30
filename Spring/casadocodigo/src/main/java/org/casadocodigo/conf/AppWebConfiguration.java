@@ -6,6 +6,7 @@ import org.casadocodigo.controllers.ProdutosController;
 import org.casadocodigo.daos.ProdutoDao;
 import org.casadocodigo.infra.FileSaver;
 import org.casadocodigo.models.CarrinhoCompras;
+import org.casadocodigo.models.CarrinhoItem;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -22,7 +23,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @EnableWebMvc
-@ComponentScan(basePackageClasses = {HomeController.class, ProdutoDao.class, FileSaver.class, CarrinhoCompras.class})
+@ComponentScan(basePackageClasses = {HomeController.class, ProdutoDao.class, FileSaver.class, CarrinhoCompras.class, CarrinhoItem.class})
 public class AppWebConfiguration extends WebMvcConfigurerAdapter {
     @Bean
     public InternalResourceViewResolver internalResourceViewResolver(){

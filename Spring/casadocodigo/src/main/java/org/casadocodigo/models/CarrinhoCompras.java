@@ -1,6 +1,9 @@
 package org.casadocodigo.models;
 
+import org.casadocodigo.daos.ProdutoDao;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.WebApplicationContext;
 
@@ -12,10 +15,13 @@ import java.util.Map;
 
 @Component
 //Escopo padrçai do Spring compartinhando a mesmo informações entre usuarios @Scope(value = WebApplicationContext.SCOPE_APPLICATION)
-@Scope(value = WebApplicationContext.SCOPE_SESSION)
+@Scope(value = WebApplicationContext.SCOPE_SESSION, proxyMode = ScopedProxyMode.TARGET_CLASS) //PROXY, o spring usa para efetuar a ligação doreta, e ele se vira para fazer o proxy
+//para fazer as dependencia
 public class CarrinhoCompras implements Serializable {
 
     private static final long serialVersionUID = 1L;
+    @Autowired
+    private ProdutoDao produtoDao;
 
     private Map<CarrinhoItem,Integer> itens = new LinkedHashMap<CarrinhoItem,Integer>();
 
@@ -46,6 +52,12 @@ public class CarrinhoCompras implements Serializable {
             total = total.add(getTotal(item));
         }
         return total;
+    }
+
+    public void  remover(Integer produtoId, TipoPreco tipoPreco){
+        Produto produto = new Produto();
+        produto.setId(produtoId);
+        itens.remove(new CarrinhoItem(produto,tipoPreco));
     }
 
 

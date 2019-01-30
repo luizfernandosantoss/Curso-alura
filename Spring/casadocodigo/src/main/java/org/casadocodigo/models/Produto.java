@@ -110,6 +110,10 @@ public class Produto  {
     public void setSumarioPath(String sumarioPath) {
         this.sumarioPath = sumarioPath;
     }
+
+    public void setId(Integer produtoId) {
+        this.id = produtoId;
+    }
 }
 
 
