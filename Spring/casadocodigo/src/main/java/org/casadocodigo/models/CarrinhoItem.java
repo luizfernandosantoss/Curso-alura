@@ -1,10 +1,14 @@
 package org.casadocodigo.models;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.math.BigDecimal;
 import java.util.Objects;
 
 public class CarrinhoItem {
-
+    @Autowired
     private Produto produto;
+    @Autowired
     private TipoPreco tipoPreco;
 
 
@@ -28,6 +32,9 @@ public class CarrinhoItem {
     public void setTipoPreco(TipoPreco tipoPreco) {
         this.tipoPreco = tipoPreco;
     }
+    public BigDecimal getPreco(){
+        return produto.precoPara(tipoPreco);
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -41,5 +48,9 @@ public class CarrinhoItem {
     @Override
     public int hashCode() {
         return Objects.hash(produto, tipoPreco);
+    }
+
+    public BigDecimal getTotal(Integer quantidade) {
+        return this.getPreco().multiply(new BigDecimal(quantidade));
     }
 }
