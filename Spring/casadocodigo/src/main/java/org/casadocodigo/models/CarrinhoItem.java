@@ -2,10 +2,13 @@ package org.casadocodigo.models;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Objects;
 
-public class CarrinhoItem {
+public class CarrinhoItem implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     @Autowired
     private Produto produto;
     @Autowired

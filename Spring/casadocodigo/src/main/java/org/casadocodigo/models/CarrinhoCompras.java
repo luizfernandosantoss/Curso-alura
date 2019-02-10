@@ -14,8 +14,9 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 @Component
-//Escopo padrçai do Spring compartinhando a mesmo informações entre usuarios @Scope(value = WebApplicationContext.SCOPE_APPLICATION)
-@Scope(value = WebApplicationContext.SCOPE_SESSION, proxyMode = ScopedProxyMode.TARGET_CLASS) //PROXY, o spring usa para efetuar a ligação doreta, e ele se vira para fazer o proxy
+//Escopo padrão do Spring compartinhando a mesmo informações entre usuarios @Scope(value = WebApplicationContext.SCOPE_APPLICATION)
+@Scope(value = WebApplicationContext.SCOPE_SESSION, proxyMode = ScopedProxyMode.TARGET_CLASS)
+//PROXY, o spring usa para efetuar a ligação doreta, e ele se vira para fazer o proxy
 //para fazer as dependencia
 public class CarrinhoCompras implements Serializable {
 
