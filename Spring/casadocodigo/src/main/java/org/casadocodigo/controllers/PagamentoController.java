@@ -11,6 +11,8 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.util.concurrent.Callable;
+
 @Controller
 @RequestMapping("/pagamento")
 public class PagamentoController {
@@ -18,22 +20,25 @@ public class PagamentoController {
     @Autowired
     private CarrinhoCompras carrinho;
 
+    @RequestMapping(value = "/finalizar",method = RequestMethod.POST)
+    public Callable<ModelAndView> finalizar(RedirectAttributes model) {
+        return () -> {
+            String uri = "http://book-payment.herokuapp.com/payment";
+            try {
+                System.out.println(carrinho.getTotal());
+                String response = restTemplate.postForObject(uri, new DadosPagamento(carrinho.getTotal()), String.class);
+                System.out.println(response);
+                model.addFlashAttribute("sucesso", response);
+                return new ModelAndView("redirect:/produtos");
+            }catch (HttpClientErrorException e){
+                e.printStackTrace();
+                model.addFlashAttribute("falha","valor maior que o permitido");
+                return new ModelAndView("redirect:/produtos");
+            }
+        };
+
+    }
+
     @Autowired
     private RestTemplate restTemplate;
-
-    @RequestMapping(value = "/finalizar",method = RequestMethod.POST)
-    public ModelAndView finalizar(RedirectAttributes model) {
-        String uri = "http://book-payment.herokuapp.com/payment";
-        try {
-            System.out.println(carrinho.getTotal());
-            String response = restTemplate.postForObject(uri, new DadosPagamento(carrinho.getTotal()), String.class);
-            System.out.println(response);
-            model.addFlashAttribute("sucesso", response);
-            return new ModelAndView("redirect:/produtos");
-        }catch (HttpClientErrorException e){
-            e.printStackTrace();
-            model.addFlashAttribute("falha","valor maior que o permitido");
-            return new ModelAndView("redirect:/produtos");
-        }
-        }
 }
