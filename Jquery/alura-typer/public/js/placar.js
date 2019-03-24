@@ -3,7 +3,11 @@ function removeLinha(event){
     $(this).parent().parent().remove();
 }
 
+$("#botao-placar").click(mostrarPlacar);
 
+function mostrarPlacar() {
+    $(".placar").slideToggle(600);
+}
 function novaLinha(nomeUsuario,quantidaPalavras){
     var linha = $("<tr>")
     var colunaUsuario = $("<td>").text(nomeUsuario);
